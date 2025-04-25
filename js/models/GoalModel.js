@@ -31,12 +31,7 @@ class GoalModel {
     }
   }
 
-  /**
-   * Update a goal on the server
-   * @param {number} id - Goal ID
-   * @param {Object} updates - Properties to update
-   * @returns {Promise<Object>} - Updated goal
-   */
+  
   async updateGoal(id, updates) {
     try {
       // Find current goal
@@ -61,11 +56,7 @@ class GoalModel {
     }
   }
 
-  /**
-   * Delete a goal from the server
-   * @param {number} id - Goal ID
-   * @returns {Promise<boolean>} - Success status
-   */
+
   async deleteGoal(id) {
     try {
       await APIs.deleteGoal(id);
@@ -79,10 +70,7 @@ class GoalModel {
     }
   }
 
-  /**
-   * Get all goals
-   * @returns {Array} - Array of goals
-   */
+
   getGoals() {
     return this.goals;
   }
