@@ -4,9 +4,7 @@ class GoalController {
     this.view = view;
   }
 
-  /**
-   * Initialize the application
-   */
+  
   async init() {
     // Bind event handlers
     this.view.bindEvents(
@@ -18,9 +16,6 @@ class GoalController {
     await this.loadGoals();
   }
 
-  /**
-   * Load goals from the server
-   */
   async loadGoals() {
     try {
       await this.model.fetchGoals();
@@ -30,9 +25,7 @@ class GoalController {
     }
   }
 
-  /**
-   * Handle form submission for new goal
-   */
+
   async handleFormSubmit() {
     const formData = this.view.getFormData();
 
