@@ -5,10 +5,7 @@ class GoalModel {
     this.goals = [];
   }
 
-  /**
-   * Fetch all goals from the server
-   * @returns {Promise<Array>} - Array of goals
-   */
+
   async fetchGoals() {
     try {
       this.goals = await APIs.getGoals();
@@ -19,11 +16,7 @@ class GoalModel {
     }
   }
 
-  /**
-   * Add a new goal to the server
-   * @param {Object} goal - Goal object to add
-   * @returns {Promise<Object>} - Added goal with ID
-   */
+ 
   async addGoal(goal) {
     try {
       const newGoal = await APIs.createGoal({
